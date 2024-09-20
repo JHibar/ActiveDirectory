@@ -182,10 +182,6 @@ Now we can see that DC has a green arrow indicating that it is configured correc
 <img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
 <br />
 <br />
-
-<img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
-<br />
-<br />
 Now we will set up DHCP. Go back to the Dashboard and click on "Add roles and features". Click "Next >" until we get to the "Server Selection" page, we can now see that the name of our server is DC.mydomain.com showing that we are configured correctly up to this point. Click "Next >"
 <img src="https://github.com/user-attachments/assets/d439e4b5-3f6b-4fbc-9311-b85b69d0285e"/>
 <br />
@@ -270,61 +266,86 @@ Now we will add 1k users to our server to make it more realistic. Open up Powers
 <img src="https://github.com/user-attachments/assets/7a63c990-f0c3-4884-8dc8-7efdf88912af"/>
 <br />
 <br />
-Download the PowerShell script <a href="https://github.com/joshmadakor/AD_PS/archive/master.zip">HERE</a> <br />
+Download the PowerShell script <a href="https://github.com/joshmadakor1/AD_PS/archive/master.zip">HERE</a> <br />
+This has the script as well as a names.txt file that is loaded with 1k names. The script will create the _USERS organizational group as well as create all of the users associated with the names with the password "Password1" that never expires. <br />
 Open the "1_CREATE_USERS" script in your Powershell window <br />
-In the bottom field, we will type "Set-ExecutionPolicy Unrestricted" so that we are able to execute the script, click "Yes to all"
+In the bottom field, we will type "Set-ExecutionPolicy Unrestricted" so that we are able to execute the script, click "Yes to All"
 <img src="https://github.com/user-attachments/assets/b521dfdd-4fd3-4721-a983-9cfc1e5fcbe9"/>
 <br />
 <br />
-
-<img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
+Now we will change our directory to where the script is located, mine is on the Desktop of my DC (cd C:\Users\a-jhibar\Desktop\AD_PS-master)
+<img src="https://github.com/user-attachments/assets/7e69586a-57d4-4f88-a99a-8185ba25648d"/>
 <br />
 <br />
-
-<img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
+Click the green play button to run the script, you will see all of the users start to be added.
+<img src="https://github.com/user-attachments/assets/24b28c35-7ef2-482e-9950-4422d4fa3164"/>
 <br />
 <br />
-
-<img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
+Now we can go back to the Active Directory Users and Computers. Right-click on the server and click "Refresh"
+<img src="https://github.com/user-attachments/assets/18fc6fa4-7df4-48a2-867d-bd9b0d385358"/>
 <br />
 <br />
-
-<img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
+Now we should see the _USERS organizational unit with all of our freshly added users
+<img src="https://github.com/user-attachments/assets/7b7459ef-c8a2-43db-9398-b5a862be8354"/>
 <br />
 <br />
-
-<img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
+We can right-click on the _USERS and click on "Find..." to test it
+<img src="https://github.com/user-attachments/assets/03194ed2-358f-4129-aa72-de0296d74a26"/>
 <br />
 <br />
-
-<img src="https://github.com/user-attachments/assets/f13da5f2-7023-4d77-ba3d-e0d4194ec2b4"/>
+I added myself to the names.txt file so I am able to type "jhibar" and click "Find Now" to see that I have been successfully loaded as a user
+<img src="https://github.com/user-attachments/assets/5860dd2e-d4be-4a57-8a03-bacecf40021c"/>
 <br />
 <br />
-
-
-
-
-
-
-![Screenshot (142)](https://github.com/user-attachments/assets/c14fa0af-0567-4b68-96d8-8bf26b8dd69f)
-![Screenshot (141)](https://github.com/user-attachments/assets/408e62be-2826-4a22-b6fd-5cb660e607e8)
-![Screenshot (140)](https://github.com/user-attachments/assets/5860dd2e-d4be-4a57-8a03-bacecf40021c)
-![Screenshot (139)](https://github.com/user-attachments/assets/03194ed2-358f-4129-aa72-de0296d74a26)
-![Screenshot (138)](https://github.com/user-attachments/assets/7b7459ef-c8a2-43db-9398-b5a862be8354)
-![Screenshot (137)](https://github.com/user-attachments/assets/18fc6fa4-7df4-48a2-867d-bd9b0d385358)
-![Screenshot (136)](https://github.com/user-attachments/assets/24b28c35-7ef2-482e-9950-4422d4fa3164)
-![Screenshot (135)](https://github.com/user-attachments/assets/7e69586a-57d4-4f88-a99a-8185ba25648d)
-
-![Screenshot (153)](https://github.com/user-attachments/assets/bfb4a6b6-9af0-438c-a87d-596a60d93000)
-![Screenshot (152)](https://github.com/user-attachments/assets/da9b148c-ebae-460a-b07a-618b21f71abb)
-![Screenshot (151)](https://github.com/user-attachments/assets/d112b3ed-f327-4206-b298-f019577d3655)
-![Screenshot (150)](https://github.com/user-attachments/assets/871ea620-af35-4582-84fa-1d48d63a1c6d)
-![Screenshot (149)](https://github.com/user-attachments/assets/d6e4b5c9-3d06-4d02-95eb-83740da1ffc8)
-![Screenshot (148)](https://github.com/user-attachments/assets/f9595892-6ff0-4e96-8468-a62ba7ec76c7)
-![Screenshot (147)](https://github.com/user-attachments/assets/463b7d9a-7425-4c1a-a7c7-f7103cbd1a6a)
-![Screenshot (146)](https://github.com/user-attachments/assets/4698a30f-8b22-49a4-a223-6cfd18d95b43)
-
-
+We can also just click "Find Now" without anything in the fields to see that we have "1000 item(s) found to verify we have 1k users
+<img src="https://github.com/user-attachments/assets/408e62be-2826-4a22-b6fd-5cb660e607e8"/>
+<br />
+<br />
+Now we will set up our client workstation <br />
+I used Windows 10 Pro (Home can sometimes not work for this project) <br />
+Make sure the only network is Internal <br />
+I decided to do 2048 MB (2 GB) of memory and 2 processors
+<img src="https://github.com/user-attachments/assets/c14fa0af-0567-4b68-96d8-8bf26b8dd69f"/>
+<br />
+<br />
+Sign in to the Windows 10 workstation and open up the command prompt. Here we can test if everything is set up correctly. Use "ipconfig" to view the IP address and default gateway (IP address should be the first address that was set up for the DHCP server and the default gateway should be the IP address of the DC). <br />
+If there is not default gateway, use "ipconfig /renew" <br />
+Now we can ping our DC by using "ping 172.16.0.1" to see that we are connected to the DC correctly."<br />
+Also, we ping a webpage to make sure that we are connected to the internet and our RAS to our NAT is working (ping www.google.com)
+<img src="https://github.com/user-attachments/assets/4698a30f-8b22-49a4-a223-6cfd18d95b43"/>
+<br />
+<br />
+Now we should rename the system to make it more easily identifiable on the network. Go to settings and click "Rename this PC (advanced)"
+<img src="https://github.com/user-attachments/assets/463b7d9a-7425-4c1a-a7c7-f7103cbd1a6a"/>
+<br />
+<br />
+Rename it to something that makes sense (I chose CLIENT1), and then click on the box for "Domain" and enter the domain name (mydomain.com). Click "OK", if done correctly, a pop-up should show up saying welcome to the domain
+<img src="https://github.com/user-attachments/assets/f9595892-6ff0-4e96-8468-a62ba7ec76c7"/>
+<br />
+<br />
+Click "Restart Now" to complete the name and domain change
+<img src="https://github.com/user-attachments/assets/d6e4b5c9-3d06-4d02-95eb-83740da1ffc8"/>
+<br />
+<br />
+Back on our DC, we can go to the DHCP Address Leases and see that 172.16.0.100 is now being used by "CLIENT1.mydomain.com" and when it expires
+<img src="https://github.com/user-attachments/assets/871ea620-af35-4582-84fa-1d48d63a1c6d"/>
+<br />
+<br />
+If we go to our Active Directory Users and Computers window, we can also see under "Computers" we have "CLIENT1"
+<img src="https://github.com/user-attachments/assets/d112b3ed-f327-4206-b298-f019577d3655"/>
+<br />
+<br />
+Now we can go back to our CLIENT1 machine and use one of the user logins (notice that is now says "Sign in to:MYDOMAIN", this means that CLIENT1 is successfully on the domain now
+<img src="https://github.com/user-attachments/assets/da9b148c-ebae-460a-b07a-618b21f71abb"/>
+<br />
+<br />
+Once signed in, we can use the "whoami" command in the command prompt to see that I am loggd in as a user under the new domain
+<img src="https://github.com/user-attachments/assets/bfb4a6b6-9af0-438c-a87d-596a60d93000"/>
+<br />
+<br />
+<br />
+<br />
+<h2>Congratulations! You have successfully completed the Active Directory Home Lab!</h2>
 </p>
 
 
