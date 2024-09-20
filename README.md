@@ -270,7 +270,7 @@ Now we will add 1k users to our server to make it more realistic. Open up Powers
 <img src="https://github.com/user-attachments/assets/7a63c990-f0c3-4884-8dc8-7efdf88912af"/>
 <br />
 <br />
-Download the PowerShell script HERE https://github.com/joshmadakor/AD_PS/archive/master.zip <br />
+Download the PowerShell script <a href="https://github.com/joshmadakor/AD_PS/archive/master.zip">HERE</a> <br />
 Open the "1_CREATE_USERS" script in your Powershell window <br />
 In the bottom field, we will type "Set-ExecutionPolicy Unrestricted" so that we are able to execute the script, click "Yes to all"
 <img src="https://github.com/user-attachments/assets/b521dfdd-4fd3-4721-a983-9cfc1e5fcbe9"/>
